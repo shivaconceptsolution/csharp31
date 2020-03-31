@@ -1,0 +1,32 @@
+﻿<Window x:Class="CommandExample.TemplateExample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TemplateExample" Height="300" Width="300">
+    <Window.Resources>
+
+        <ControlTemplate x:Key="abc" TargetType="{x:Type Button}">
+
+            <Grid>
+
+                <Ellipse Width="210 " Height="110" Fill="Black "/>
+
+                <Ellipse Width="200 " Height="100" Fill="Brown" />
+
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+
+
+        </ControlTemplate>
+
+    </Window.Resources>
+    <StackPanel>
+
+        <Button Content="Hello" Template="{StaticResource abc}" >
+            
+        </Button>
+        <Button Content="Hello" Template="{StaticResource abc}" >
+
+        </Button>
+    </StackPanel>
+</Window>

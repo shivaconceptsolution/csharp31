@@ -1,0 +1,34 @@
+﻿<Window x:Class="CommandExample.AnimationExample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AnimationExample" Height="345.113" Width="493.985">
+    <StackPanel>
+        <Border Background="Violet" 
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"  Width="100" Height="100" >
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Border.MouseLeftButtonDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames 
+        Storyboard.TargetName="transformObj"
+        Storyboard.TargetProperty="X"
+        Duration="0:0:12">
+                                    <DiscreteDoubleKeyFrame Value="500" KeyTime="0:0:3" />
+                                    <DiscreteDoubleKeyFrame Value="50" KeyTime="0:0:6" />
+                                    <DiscreteDoubleKeyFrame Value="300" KeyTime="0:0:9" />
+                                </DoubleAnimationUsingKeyFrames>
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>
+            <Border.RenderTransform>
+                <TranslateTransform x:Name="transformObj" X="0" Y="0" />
+            </Border.RenderTransform>
+        </Border>
+
+    </StackPanel>
+</Window>

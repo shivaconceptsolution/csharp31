@@ -1,0 +1,31 @@
+﻿<Window x:Class="CommandExample.TextBoxStyle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TextBoxStyle" Height="300" Width="600">
+    <StackPanel>
+        <TextBox Text="This is a TextBox without Styles" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            CharacterCasing="Lower" 
+            FlowDirection="RightToLeft"
+            FontSize="20" 
+            FontWeight="UltraBlack"
+            Width="400"
+            Height="40">
+            <TextBox.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Cyan" Offset="0.0"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Red" Offset="1.0"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+            <TextBox.Foreground>
+                <SolidColorBrush Color="Black"/>
+            </TextBox.Foreground>
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="40" Color="Maroon"
+           Direction="50" Opacity="0.5"/>
+            </TextBox.Effect>
+        </TextBox>
+    </StackPanel>
+</Window>
